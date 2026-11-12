@@ -1,0 +1,22 @@
+# Azure Functions
+local.settings.json
+bin/
+obj/
+.python_packages/
+__blobstorage__/
+__queuestorage__/
+__azurite_db*__.json
+
+# Node
+node_modules/
+npm-debug.log*
+*.log
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/

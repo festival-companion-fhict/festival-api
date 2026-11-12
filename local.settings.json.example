@@ -1,0 +1,11 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AzureWebJobsStorage": "",
+    "SQL_SERVER": "festival-sql-db01.database.windows.net",
+    "SQL_DATABASE": "festival-db",
+    "SQL_USER": "<sql-gebruiker>",
+    "SQL_PASSWORD": "<wachtwoord-hier-NOOIT-committen>"
+  }
+}
