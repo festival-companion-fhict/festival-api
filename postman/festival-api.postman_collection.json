@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "Festival API",
-    "description": "Endpoints van de festival-api. Zet {{baseUrl}} in een environment: lokaal http://localhost:7071/api, in Azure https://func-festival-api.azurewebsites.net/api",
+    "description": "Endpoints van de festival-api. Zet {{baseUrl}} op het adres van de API, lokaal http://localhost:7071/api.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
