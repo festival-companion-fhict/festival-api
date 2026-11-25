@@ -59,6 +59,52 @@
           "path": ["locaties"]
         }
       }
+    },
+    {
+      "name": "POST ping (één)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"lat\": 52.440372,\n  \"lon\": 5.758726\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/pings",
+          "host": ["{{baseUrl}}"],
+          "path": ["pings"]
+        }
+      }
+    },
+    {
+      "name": "POST pings (lijst)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  { \"lat\": 52.440372, \"lon\": 5.758726 },\n  { \"lat\": 52.440184, \"lon\": 5.751557 },\n  { \"lat\": 52.438000, \"lon\": 5.759000 }\n]",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/pings",
+          "host": ["{{baseUrl}}"],
+          "path": ["pings"]
+        }
+      }
+    },
+    {
+      "name": "GET drukte",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/drukte",
+          "host": ["{{baseUrl}}"],
+          "path": ["drukte"]
+        }
+      }
     }
   ]
 }
