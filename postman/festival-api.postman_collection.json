@@ -200,6 +200,31 @@
           "path": ["festival_info"]
         }
       }
+    },
+    {
+      "name": "GET optredens nu",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/optredens/nu",
+          "host": ["{{baseUrl}}"],
+          "path": ["optredens", "nu"]
+        }
+      }
+    },
+    {
+      "name": "GET optredens nu (testtijd)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/optredens/nu?tijd=2025-06-28T18:42",
+          "host": ["{{baseUrl}}"],
+          "path": ["optredens", "nu"],
+          "query": [{ "key": "tijd", "value": "2025-06-28T18:42" }]
+        }
+      }
     }
   ]
 }
