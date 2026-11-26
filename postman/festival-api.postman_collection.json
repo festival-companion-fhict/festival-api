@@ -176,6 +176,18 @@
           "path": ["meldingen", "1"]
         }
       }
+    },
+    {
+      "name": "GET aankondigingen",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/aankondigingen",
+          "host": ["{{baseUrl}}"],
+          "path": ["aankondigingen"]
+        }
+      }
     }
   ]
 }
