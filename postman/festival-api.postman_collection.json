@@ -9,6 +9,11 @@
       "key": "baseUrl",
       "value": "http://localhost:7071/api",
       "type": "string"
+    },
+    {
+      "key": "functionKey",
+      "value": "",
+      "type": "string"
     }
   ],
   "item": [
@@ -103,6 +108,72 @@
           "raw": "{{baseUrl}}/drukte",
           "host": ["{{baseUrl}}"],
           "path": ["drukte"]
+        }
+      }
+    },
+    {
+      "name": "POST melding",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\": \"KAPOT\",\n  \"beschrijving\": \"Kraan bij de toiletten lekt\",\n  \"lat\": 52.440372,\n  \"lon\": 5.758726,\n  \"gebruiker_id\": 1\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/meldingen",
+          "host": ["{{baseUrl}}"],
+          "path": ["meldingen"]
+        }
+      }
+    },
+    {
+      "name": "POST melding anoniem zonder locatie",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"type\": \"AFVAL\",\n  \"beschrijving\": \"Prullenbak vol\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/meldingen",
+          "host": ["{{baseUrl}}"],
+          "path": ["meldingen"]
+        }
+      }
+    },
+    {
+      "name": "GET meldingen",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "x-functions-key", "value": "{{functionKey}}" }],
+        "url": {
+          "raw": "{{baseUrl}}/meldingen",
+          "host": ["{{baseUrl}}"],
+          "path": ["meldingen"]
+        }
+      }
+    },
+    {
+      "name": "PATCH melding status",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "x-functions-key", "value": "{{functionKey}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"IN_BEHANDELING\"\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/meldingen/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["meldingen", "1"]
         }
       }
     }
