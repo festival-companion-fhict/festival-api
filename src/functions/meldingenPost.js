@@ -2,8 +2,7 @@ const { app } = require('@azure/functions');
 const { getPool, sql } = require('../db');
 const { isPositiefId, foutAntwoord, DB_FOUT } = require('../meldingen');
 
-const TYPES = ['AFVAL', 'TOILET', 'KAPOT', 'OVERIG', 'MEDICAL', 'SECURITY'];
-const MAX_BESCHRIJVING = 500;
+const TYPES = ['AFVAL', 'TOILET', 'KAPOT', 'LEKKAGE', 'VERLOREN', 'OVERIG', 'MEDICAL', 'SECURITY'];const MAX_BESCHRIJVING = 500;
 
 const isLeeg = (waarde) => waarde === undefined || waarde === null;
 
