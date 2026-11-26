@@ -188,6 +188,18 @@
           "path": ["aankondigingen"]
         }
       }
+    },
+    {
+      "name": "GET festival_info",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/festival_info",
+          "host": ["{{baseUrl}}"],
+          "path": ["festival_info"]
+        }
+      }
     }
   ]
 }
